@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Ar-rayyan Ramadhani - Personal Portfolio
 
-## Getting Started
+Website portofolio profesional milik **Ar-rayyan Ramadhani**, seorang Software Engineer lulusan Universitas Syiah Kuala yang memiliki spesialisasi di bidang **Frontend Web Development** & **Mobile Development**.
 
-First, run the development server:
+Website ini mendemonstrasikan pengalaman kerja, riwayat organisasi, serta koleksi proyek inovatif menggunakan teknologi arsitektur web modern yang dirancang untuk performa tinggi dengan *user experience* (UX) yang sangat elegan.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🌐 Live Demo
+*(URL Vercel/Produksi Anda di sini)*
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack & Technologies
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Proyek ini dibangun dari dasar menggunakan basis ekosistem yang canggih:
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animation:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Language:** TypeScript
 
-## Learn More
+## ✨ Key Features
+1. **Modern Editorial Aesthetic:** Desain super minimalis layaknya majalah digital (*editorial design*), memaksimalkan *negative space* untuk fokus tinggi.
+2. **Smooth Micro-Animations:** Didukung penuh oleh transisi dan animasi berantai *Framer Motion* yang sangat ringan.
+3. **Fully Decoupled Data:** Sistem data statis (proyek, *skill*, sertifikasi, riwayat hidup) sepenuhnya dipisahkan menjadi pola *modular* di direktori `/data`, menghindari kode yang kotor dan mempermudah ekstensi (*scaling*).
+4. **Interactive Modal Contact:** Menerapkan sistem form WA khusus yang langsung membuahkan draf pesan secara *on the fly*, serta perutean API Web Mail Google yang menghindari peringatan *prompt* usang di sistem operasi.
+5. **SEO & Perf-Optimized:** Struktur SSR dan arsitektur file dinamis dari Next.js (App Router).
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📂 Struktur Direktori Utama
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/app` — *Routing Next.js App Router & Layout System*
+- `/components` — Seluruh komponen pilar dari UI web *(Hero, Skills, Projects, Journey, Contact, Navbar).*
+- `/data` — Gudang data modular / *Constants* tempat mengisi seluruh konten riwayat (seperti `projects.ts`, `skills.ts`, `journey.ts`).
+- `/public/assets` — Direktori penyimpanan gambar HD dan artefak PDF.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 💻 Cara Menjalankan Versi Lokal (Development)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pastikan [Node.js](https://nodejs.org/) versi terbaru sudah terinstal di komputer/OS Anda.
+
+1. **Unduh Repositori ini:**
+   ```bash
+   git clone https://github.com/MRKOsius/personal-website-portofolio.git
+   cd personal-website-portofolio
+   ```
+
+2. **Instal Dependensi:**
+   ```bash
+   npm install
+   ```
+
+3. **Jalankan Server Development:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Kunjungi Website:**
+   Buka [http://localhost:3000](http://localhost:3000) pada peramban web kesayangan Anda.
+
+---
+
+## 📬 Hubungi Saya
+
+- **Email:** [ramadhaniarrayyan@gmail.com](mailto:ramadhaniarrayyan@gmail.com)
+- **LinkedIn:** [ar-rayyan-ramadhani](https://linkedin.com/in/ar-rayyan-ramadhani)
+- **GitHub:** [@MRKOsius](https://github.com/MRKOsius)
+
+> *Dibuat dengan dedikasi penuh terhadap detail, perfoma, dan keindahan estetika digital.*
