@@ -28,12 +28,12 @@ export default function Hero() {
     <section className="relative w-full h-[90vh] min-h-[700px] flex items-end justify-center mt-20 bg-cloud-pattern">
 
       {/* Teks Nama Besar (Background) */}
-      <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-full text-center z-0 whitespace-nowrap flex justify-center gap-4">
+      <div className="absolute top-[20%] md:top-[30%] left-1/2 -translate-x-1/2 w-full text-center z-0 whitespace-nowrap flex flex-col md:flex-row items-center justify-center gap-0 md:gap-4 leading-tight">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-[10vw] font-heading font-bold uppercase leading-none tracking-tight text-outline select-none"
+          className="text-[14vw] md:text-[10vw] font-heading font-bold uppercase tracking-tight text-outline select-none leading-none"
         >
           AR-RAYYAN
         </motion.h1>
@@ -41,7 +41,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-[10vw] font-heading font-black uppercase leading-none tracking-tight text-[#0a0a0a] select-none"
+          className="text-[14vw] md:text-[10vw] font-heading font-black uppercase tracking-tight text-[#0a0a0a] select-none leading-none -mt-4 md:mt-0"
         >
           RAMADHANI
         </motion.h1>
@@ -52,37 +52,37 @@ export default function Hero() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="relative z-10 w-[300px] md:w-[450px] h-[400px] md:h-[550px]"
+        className="relative z-10 w-[280px] md:w-[450px] h-[350px] md:h-[550px]"
       >
         <Image
           src="/assets/rayyan.webp"
           alt="Ar-rayyan Ramadhani"
           fill
-          sizes="(max-width: 768px) 300px, 450px"
+          sizes="(max-width: 768px) 280px, 450px"
           priority
           className="object-contain object-bottom drop-shadow-2xl"
         />
       </motion.div>
 
       {/* Teks Deskripsi Kiri Bawah & Socmed Kanan Bawah */}
-      <div className="absolute bottom-10 left-0 w-full flex flex-col md:flex-row justify-between items-end z-20 pointer-events-none px-6 md:px-0">
+      <div className="absolute bottom-6 md:bottom-10 left-0 w-full flex flex-col md:flex-row justify-between items-center md:items-end z-20 pointer-events-none px-6 md:px-0 gap-6 md:gap-0">
 
         {/* Kiri: Deskripsi Profesi */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="max-w-sm pointer-events-auto"
+          className="max-w-sm pointer-events-auto text-center md:text-left flex flex-col items-center md:items-start"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 block">
+          <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-3 block">
             Frontend Developer
           </h2>
-          <p className="text-sm md:text-base text-gray-600 mb-6 font-sans">
+          <p className="text-xs md:text-base text-gray-600 mb-4 md:mb-6 font-sans">
             S1 Teknik Informatika. Merancang pengalaman digital yang mulus, skalabel, dan efisien dengan teknologi modern.
           </p>
           <Link
             href="#journey"
-            className="inline-flex items-center justify-center rounded-full bg-[#0a0a0a] px-6 py-3 text-sm font-medium text-white transition-transform hover:scale-105 active:scale-95"
+            className="inline-flex items-center justify-center rounded-full bg-[#0a0a0a] px-5 py-2.5 text-xs md:text-sm md:px-6 md:py-3 font-medium text-white transition-transform hover:scale-105 active:scale-95"
           >
             Lihat Perjalanan <ArrowUpRight className="w-4 h-4 ml-2" />
           </Link>
@@ -93,7 +93,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="flex flex-col gap-3 mt-8 md:mt-0 pointer-events-auto"
+          className="flex flex-row md:flex-col gap-2 md:gap-3 pointer-events-auto flex-wrap justify-center"
         >
           {socialLinks.map((social) => {
             const Icon = social.icon;
@@ -103,10 +103,10 @@ export default function Hero() {
                 href={social.url}
                 target={social.url !== '#' ? "_blank" : undefined}
                 rel={social.url !== '#' ? "noopener noreferrer" : undefined}
-                className="flex items-center justify-start gap-4 px-6 py-2 border border-gray-300 rounded-full hover:border-gray-900 transition-colors bg-white/80 backdrop-blur-sm shadow-sm font-medium text-gray-700 w-40 group"
+                className="flex items-center justify-center gap-2 md:gap-4 px-4 py-2 border border-gray-300 rounded-full hover:border-gray-900 transition-colors bg-white/80 backdrop-blur-sm shadow-sm font-medium text-gray-700 w-auto md:w-40 group"
               >
-                <Icon className="w-5 h-5 text-gray-500 group-hover:text-black transition-colors shrink-0" />
-                <span className="text-sm group-hover:text-black transition-colors">{social.name}</span>
+                <Icon className="w-4 h-4 md:w-5 md:h-5 text-gray-500 group-hover:text-black transition-colors shrink-0" />
+                <span className="text-xs md:text-sm group-hover:text-black transition-colors hidden md:block">{social.name}</span>
               </a>
             );
           })}

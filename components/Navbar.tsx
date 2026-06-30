@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-6 max-w-7xl mx-auto w-full">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center md:justify-between px-6 py-6 max-w-7xl mx-auto w-full">
       {/* Kiri: Available Badge */}
       <div className="hidden md:flex items-center gap-2 bg-white/80 backdrop-blur-md border border-gray-200 px-4 py-2 rounded-full shadow-sm">
         <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></span>
