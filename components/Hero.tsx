@@ -103,6 +103,7 @@ export default function Hero() {
                 href={social.url}
                 target={social.url !== '#' ? "_blank" : undefined}
                 rel={social.url !== '#' ? "noopener noreferrer" : undefined}
+                aria-label={social.name}
                 className="flex items-center justify-center gap-2 md:gap-4 px-4 py-2 border border-gray-300 rounded-full hover:border-gray-900 transition-colors bg-white/80 backdrop-blur-sm shadow-sm font-medium text-gray-700 w-auto md:w-40 group"
               >
                 <Icon className="w-4 h-4 md:w-5 md:h-5 text-gray-500 group-hover:text-black transition-colors shrink-0" />

@@ -92,9 +92,16 @@ export default function Contact() {
                 {socialLinks.map((social) => {
                     const Icon = social.icon;
                     return (
-                        <a key={social.name} href={social.url} target={social.url !== '#' ? "_blank" : undefined} rel={social.url !== '#' ? "noopener noreferrer" : undefined} className="flex items-center gap-3 px-6 py-3 bg-white text-gray-800 rounded-full hover:scale-105 transition-transform text-sm font-medium border border-gray-200 shadow-sm group">
+                        <a 
+                            key={social.name} 
+                            href={social.url} 
+                            target={social.url !== '#' ? "_blank" : undefined} 
+                            rel={social.url !== '#' ? "noopener noreferrer" : undefined}
+                            aria-label={social.name}
+                            className="flex items-center gap-3 px-6 py-3 bg-white text-gray-800 rounded-full hover:scale-105 transition-transform text-sm font-medium border border-gray-200 shadow-sm group"
+                        >
                             <Icon className="w-5 h-5 text-gray-600 group-hover:text-black transition-colors" />
-                            {social.name}
+                            <span className="hidden md:inline">{social.name}</span>
                         </a>
                     );
                 })}
@@ -120,6 +127,7 @@ export default function Contact() {
                         >
                             <button
                                 onClick={() => setIsModalOpen(false)}
+                                aria-label="Tutup Modal"
                                 className="absolute top-6 right-6 p-2 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
                             >
                                 <X className="w-5 h-5 text-gray-600" />
@@ -133,7 +141,7 @@ export default function Contact() {
                             <div className="flex flex-col w-full gap-4">
                                 {/* Opsi Email */}
                                 <div className="flex flex-col gap-2">
-                                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Email Pribadi</span>
+                                    <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Email Pribadi</span>
                                     <a
                                         href="https://mail.google.com/mail/?view=cm&fs=1&to=ramadhaniarrayyan@gmail.com"
                                         target="_blank"
@@ -151,7 +159,7 @@ export default function Contact() {
 
                                 {/* Opsi WhatsApp */}
                                 <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-gray-100">
-                                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Kirim Pesan WhatsApp</span>
+                                    <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Kirim Pesan WhatsApp</span>
                                     <form 
                                         className="flex flex-col w-full gap-3 mt-1"
                                         onSubmit={(e) => {
