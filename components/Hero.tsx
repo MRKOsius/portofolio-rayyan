@@ -25,15 +25,15 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative w-full h-[90vh] min-h-[700px] flex items-end justify-center mt-20 bg-cloud-pattern">
+    <section className="relative w-full min-h-screen md:min-h-[700px] md:h-[90vh] flex flex-col md:flex-row items-center md:items-end justify-center pt-32 md:pt-0 mt-0 md:mt-20 bg-cloud-pattern">
 
       {/* Teks Nama Besar (Background) */}
-      <div className="absolute top-[20%] md:top-[30%] left-1/2 -translate-x-1/2 w-full text-center z-0 whitespace-nowrap flex flex-col md:flex-row items-center justify-center gap-0 md:gap-4 leading-tight">
+      <div className="absolute top-[10%] md:top-[30%] left-1/2 -translate-x-1/2 w-full text-center z-0 whitespace-nowrap flex flex-col md:flex-row items-center justify-center gap-0 md:gap-4 leading-tight">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-[14vw] md:text-[10vw] font-heading font-bold uppercase tracking-tight text-outline select-none leading-none"
+          className="text-[15vw] md:text-[10vw] font-heading font-bold uppercase tracking-tight text-outline select-none leading-none"
         >
           AR-RAYYAN
         </motion.h1>
@@ -41,7 +41,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-[14vw] md:text-[10vw] font-heading font-black uppercase tracking-tight text-[#0a0a0a] select-none leading-none -mt-4 md:mt-0"
+          className="text-[15vw] md:text-[10vw] font-heading font-black uppercase tracking-tight text-[#0a0a0a] select-none leading-none -mt-2 md:mt-0"
         >
           RAMADHANI
         </motion.h1>
@@ -65,19 +65,19 @@ export default function Hero() {
       </motion.div>
 
       {/* Teks Deskripsi Kiri Bawah & Socmed Kanan Bawah */}
-      <div className="absolute bottom-6 md:bottom-10 left-0 w-full flex flex-col md:flex-row justify-between items-center md:items-end z-20 pointer-events-none px-6 md:px-0 gap-6 md:gap-0">
+      <div className="relative md:absolute bottom-auto md:bottom-10 left-0 w-full flex flex-col md:flex-row justify-between items-center md:items-end z-20 pointer-events-none px-4 md:px-0 gap-8 md:gap-0 pb-16 md:pb-0 mt-8 md:mt-0">
 
         {/* Kiri: Deskripsi Profesi */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="max-w-sm pointer-events-auto text-center md:text-left flex flex-col items-center md:items-start"
         >
-          <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-3 block">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-3 block">
             Frontend Developer
           </h2>
-          <p className="text-xs md:text-base text-gray-600 mb-4 md:mb-6 font-sans">
+          <p className="text-sm md:text-base text-gray-700 mb-5 md:mb-6 font-sans">
             S1 Teknik Informatika. Merancang pengalaman digital yang mulus, skalabel, dan efisien dengan teknologi modern.
           </p>
           <Link
